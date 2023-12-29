@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 구성 태그</title>
+</head>
+<body>
+    <form>
+        <label>
+        id: <input type="text" placeholder="id를 입력해 주세요."/>
+        </label><br/>
+        <label for="pw">
+            password:
+        </label>
+         <input type="password" id="pw"/><br/>
+        email: <input type="email"/>
+        <input type="button" value="login"/>
+        <input type="submit" value="login"/>
+        <button><span style="color: red;"></span>로그인</button> <!--button은 기본적으로  submit이다.-->
+        <button><span style="color: red;"></span>로그인</button> <!--기본적으로  submit이다.-->
+    
+        <input type="color">
+        <input type="file">
+        <input type="number">
+        <input type="date">
+        <input type="range">
+        <!--input은 한 줄만 쓸 수 있지만 textarea는 스크롤바가 생기고 여러줄 쓸 수 있다-->
+        <textarea cols="30" rows="10" value="allie"></textarea>
+
+    <hr/>
+        <h5>다음중 input의 type이 아닌 것은?(모두 고르시오)</h5>
+        <!--label로 묶어주면 글자를 눌러도 체크박스에 표시된다.-->
+        <label>
+        <input type="checkbox">alt
+        </label>
+        <label>
+            <input type="checkbox">text
+        </label>
+        <label>
+            <input type="checkbox">img
+        </label>
+        <label>
+            <input type="checkbox">click
+        </label>
+        <label>
+            <input type="checkbox">date
+        </label>
+        
+    <h5>다음 중 img 태그의 속성인 것은?</h5>
+    <!--input의 id와 label의 for가 같으면 그룹화 되어 같이 엮인다.-->
+    <!--이름을 똑같이 넣으면 radio 중 하나만 선택할 수 있다-->
+    <input type="radio" name="img" id="alt" checked/>
+    <label for="alt">alt</label>
+
+    <input type="radio" name="img" id="bread"/>
+    <label for="bread">bread</label>
+     
+    <input type="radio" name="img" id="href"/>
+    <label for="href">href</label>
+     
+    <input type="radio" name="img" id="mouse"/>
+    <label for="mouse">mouse</label>
+    
+    <input type="radio" name="img" id="dragon" disabled/>
+    <label for="dragon">dragon</label>
+    <br/>
+
+    <select>
+        <optgroup label="빨간꽃">
+            <option value="장미" disabled>장미</option>
+            <option value="동백꽃">동백꽃</option>
+            <option value="튤립">튤립</option>
+        </optgroup>
+        <optgroup label="하얀꽃">
+            <option value="벚꽃">벚꽃</option>
+            <option value="매화">매화</option>
+        </optgroup>
+    </select>
+    </form>
+
+</body>
+</html>
