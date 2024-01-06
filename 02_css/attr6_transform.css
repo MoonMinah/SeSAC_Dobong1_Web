@@ -1,0 +1,54 @@
+.img-box{
+    background-color: #9494ed;
+    width: 400px;
+    height: 250px;
+
+}
+.img-box img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid gold;
+    transition-duration: 5s; /*hover에 써주면 마우스를 떼었을때는 적용되지않음*/
+}
+.img-box img:hover{
+    /* 1. skew()
+    - 원하는 각도만큼 요소를 기울임
+    - x,y 축 나눠서 속성부여 가능
+        skewX()
+        skewY()
+    */
+    transform: skewX(30deg);
+    transform: skewY(30deg);
+    transform: skew(30deg);
+
+    /* 2. scale()
+    - 크기 조절 함수(확대, 축소)
+        1보다 크면 확대, 1보다 작은 소수는 축소
+    */
+    transform: scale(2); /* 하나만 적을 시 x,y 모두에 적용*/
+    transform: scaleX(1.5);
+    transform: scaleY(0.5);
+
+     /* 3. translate()
+        - 이동
+        - translateX(): X축으로 이동
+        - translateY(): Y축으로 이동
+        - translate()
+    */
+    transform: translateX();
+    transform: translateY();
+    transform: translate();
+
+    /* 4. rotate
+        - 회전 (단위 deg)
+        - rotateX(), rotateY(): 각각 X축과 Y축 기준으로 회전
+        - rotate(): 시계방향으로 회전
+    */
+    transform: rotate(90deg);
+    transform: perspective(100px) rotateX(45deg); /*perspective와 항상 함께 써야한다*/
+    transform: perspective(400px) rotateY(180deg);
+    backface-visibility: visible;
+    /* backface-visibility: hidden; */
+    
+}

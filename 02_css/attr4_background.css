@@ -1,0 +1,43 @@
+.body{
+    height: 200px;
+}
+.box{
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+}
+.background{
+    background-color: palegreen;
+    background: pink;
+    /*background 단축속성
+     background: color image repeat position/size; */
+    /*background: linear-gradient(90deg, black, white, orange); */
+    background: linear-gradient(to bottom, black, white, orange);
+}
+.background-image{
+    background-image: url('./img/small_img.png');
+
+    background-repeat: repeat;
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+
+    /* center, bottom, left, right, top의 키워드로 지정 가능*/
+    /*
+    background-position: center;
+    background-position: center top;
+    background-position: 100px 200px;
+    background-position: 100px;
+    */
+
+    background-size: 50px;
+    background-size: 90px 50px;
+    background-size: contain; /*이미지는 잘리지 않지만 
+    background-size: cover; /*이미지는 잘려도 우리가 설정한 div안에 들어온다*/
+
+    background-attachment: fixed;
+    
+    background-color: pink;
+
+    
+}

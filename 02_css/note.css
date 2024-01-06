@@ -1,0 +1,23 @@
+
+.div1{
+    width: 800px;
+    height: 500px;
+    background-color: skyblue;
+    background-image: url(./img/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a.png);
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.div2{
+    width: 800px;
+    height: 500px;
+    background-color: skyblue;
+    background-image: url(./img/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a.png);
+    background-position: 0;
+    background-size: 100px 30px;
+}
+.div3{
+    width: 800px;
+    height: 500px;
+    background-color: skyblue;
+    background-image: url(./img/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a.png);    
+}
