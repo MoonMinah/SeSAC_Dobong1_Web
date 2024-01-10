@@ -52,3 +52,36 @@
     /* backface-visibility: hidden; */
     
 }
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: #9494ed;
+}
+
+.box1:hover{
+    background-color: pink;
+    height: 100px;
+    width: 120px;
+
+     transition-duration: 1s;
+     /*transition-property: height;
+    transition-delay: 3s; */
+    transition-timing-function: ease;
+}
+.box2:hover{
+    background-color: aqua;
+    transform: translate(100px) scaleX;
+
+    /* transition: transform 0.5s linear 2s; */
+    /* transition: 2s 0.5s; */
+    transition: 2s;
+}
+.box3:hover{
+    transition: .6s;
+    /* opacity: 0; */
+    /*visibility: hidden;*/
+    display: none;
+}
