@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>민트 초코는 <span id="choco">맛있다 >_<</span></div>
+
+    <script>
+        let choco = document.getElementById('choco');
+        choco.innerText = '맛없다';
+        console.log(choco.textContent);
+
+        // 해답
+        const div = document.querySelector('div'); // const div = document.getElementsByTagName('div')[0];
+        const span = document.querySelector('span'); // const span = document.getElementsByTagName('span')[0];
+
+        span.textContent = '맛없다 ㅡㅡ;;'; // span.innerText = '맛없다ㅡㅡ;;';
+        span.style.color = 'red';
+        span.style.fontWeight = '700';
+    </script>
+</body>
+</html>
