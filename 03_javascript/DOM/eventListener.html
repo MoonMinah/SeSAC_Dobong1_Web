@@ -55,6 +55,25 @@
         input.addEventListener('focus', function(){
             console.log('input에 focus이벤트 발생!');
         })
+
+        // keyboard
+        input. addEventListener('keydown', function(e){
+            console.log('e : ', e);
+            console.log('e.target : ', e.target);
+            console.log('e.target.value : ', e.target.value);
+            console.log('input에 keydown 이벤트 발생!');
+        })
+
+        // scroll
+        let container = document.querySelector('.container');
+        // scroll이 없을 때 실행 x
+        container.addEventListener('scroll', function(){
+            console.log('container에 scroll 이벤트 발생');
+        })
+
+        window.addEventListener('scroll', function(){
+            console.log('container에 scroll 이벤트 발생');
+        })
     </script>
 </body>
 </html>
