@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <title>Document</title>
+  
+  <style>
+    .nav-item {
+      display: flex;
+      align-items: center;
+    }
+    @media screen and (max-width: 768px){
+      .nav-item{
+        display: flex;
+      
+        justify-content: center;
+        align-items: center;
+      }
+      #carouselExampleDark{
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <ul class="nav justify-content-end">
+      <div class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </div>
+      <div class="nav-item">
+        <div class="dropdown">
+          <button class="m-2 p-1 btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person m-2 p-2" style="color:white;"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>        
+      </div>
+    </ul>
+  </nav>
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner mx-auto p-2" style="width: 400px;">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="./image/icecream1.png" class="d-block w-100" alt="icecream1">
+        <div class="carousel-caption d-none d-md-block">
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="./image/icecream2.png" class="d-block w-100" alt="icecream2">
+        <div class="carousel-caption d-none d-md-block">
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./image/icecream3.png" class="d-block w-100" alt="icecream3">
+        <div class="carousel-caption d-none d-md-block">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" style="width: 200px;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" style="width: 400px;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+    </div>
+  </div>
+
+  <hr class="mb-4">
+  <div class="container">
+    <div class="input-form-backgroud row">
+      <div class="input-form col-md-12 mx-auto">
+        <h4 class="mb-3">회원가입</h4>
+        <form class="validation-form" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name">이름</label>
+              <input type="text" class="form-control" id="name" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                이름을 입력해주세요.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="nickname">별명</label>
+              <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                별명을 입력해주세요.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email">이메일</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+            <div class="invalid-feedback">
+              이메일을 입력해주세요.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address">주소</label>
+            <input type="text" class="form-control" id="address" placeholder="주소를 입력해주세요" required>
+            <div class="invalid-feedback">
+              주소를 입력해주세요.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="address2">상세주소<span class="text-muted">&nbsp;(필수 아님)</span></label>
+            <input type="text" class="form-control" id="address2" placeholder="상세주소를 입력해주세요.">
+          </div>
+
+          <hr class="mb-4">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="aggrement" required>
+            <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+          </div>
+          <div class="mb-4"></div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
+        </form>
+      </div>
+    </div>
+    
+    <footer class="my-3 text-center text-small">
+      <p class="mb-1">&copy; 2024</p>
+    </footer>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const forms = document.getElementsByClassName('validation-form');
+
+      Array.prototype.filter.call(forms, (form) => {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+           
+          }
+
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  </script>
+
+</body>
+
+</html>

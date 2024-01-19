@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        p{
+            color: green;
+            font-size: 40px;
+        }
+        td{
+            width: 50px;
+        }
+        td:nth-child(1){
+            color: red;
+        }
+        td:nth-child(7){
+            color: blue;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="">
+        <label for="date">날짜 :</label>
+        <input type="text" id="date">
+        <br>
+        <label for="content">내용 :</label>
+        <input type="text" id="content">
+        <br><br>
+        <button onclick="schedule()">작성</button>
+    </form>
+
+    <p>2024년 1월</p>
+    <table>
+        <tr>
+            <td>日</td>
+            <td>月</td>
+            <td>火</td>
+            <td>水</td>
+            <td>木</td>
+            <td>金</td>
+            <td>土</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="cursor: pointer;">1</td>
+            <td style="cursor: pointer;">2</td>
+            <td style="cursor: pointer;">3</td>
+            <td style="cursor: pointer;">4</td>
+            <td style="cursor: pointer;">5</td>
+            <td style="cursor: pointer;">6</td>
+        </tr>
+        <tr>
+            <td style="cursor: pointer;">7</td>
+            <td style="cursor: pointer;">8</td>
+            <td style="cursor: pointer;">9</td>
+            <td style="cursor: pointer;">10</td>
+            <td style="cursor: pointer;">11</td>
+            <td style="cursor: pointer;">12</td>
+            <td style="cursor: pointer;">13</td>
+        </tr>
+        <tr>
+            <td style="cursor: pointer;">14</td>
+            <td style="cursor: pointer;">15</td>
+            <td style="cursor: pointer;">16</td>
+            <td style="cursor: pointer;">17</td>
+            <td style="cursor: pointer;">18</td>
+            <td style="cursor: pointer;">19</td>
+            <td style="cursor: pointer;">20</td>
+        </tr>
+        <tr>
+            <td style="cursor: pointer;">21</td>
+            <td style="cursor: pointer;">22</td>
+            <td style="cursor: pointer;">23</td>
+            <td style="cursor: pointer;">24</td>
+            <td style="cursor: pointer;">25</td>
+            <td style="cursor: pointer;">26</td>
+            <td style="cursor: pointer;">27</td>
+        </tr>
+        <tr>
+            <td style="cursor: pointer;">28</td>
+            <td style="cursor: pointer;">29</td>
+            <td style="cursor: pointer;">30</td>
+            <td style="cursor: pointer;">31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        // this를 기억하기 위한 전역변수
+        let target;
+  
+        $('td').on('click', function () {
+          console.log(this);
+          // 날짜만 가져오려면 this의 text값을 가져와야 함
+          console.log($(this).text());
+  
+          // 날짜 input 선택
+          // let date = $(this).text();
+          $('#date').val($(this).text());
+  
+          // target에 this 기억해두기
+          target = this;
+        });
+  
+        function writeSchedule() {
+          let content = $('#content').val();
+  
+          // 요소 추가
+          $(target)
+            .parent()
+            .append('<span>' + content + '</span><br />');
+          // $(target.parentNode).append(~~)
+  
+          // 초기화
+          $('#content').val('');
+          $('#date').val('');
+        }
+      </script>
+
+</body>
+</html>

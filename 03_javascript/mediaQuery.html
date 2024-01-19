@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 가로가 500px 이상일 때*/
+        @media screen and (min-width: 500px) {
+            body{
+                background-color: skyblue;
+            }
+        }
+        /* 가로가 300px 이하일 떄*/
+        /*300px가 가장 크므로 max가 300px가 되어야한다.*/
+        @media screen and (max-width: 500px) {  
+            body{
+                background-color: orange;
+            }
+        }
+
+        /*세로가 500px 이상일 때*/
+        @media screen and (min-height: 500px) {  
+            p{
+                background-color: green;
+            }
+        }
+        @media screen and (max-heigh: 300px) {  
+            p{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>mediaQuery 실습</p>
+</body>
+</html>
