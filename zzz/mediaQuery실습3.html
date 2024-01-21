@@ -15,8 +15,7 @@
       }
 
       body {
-        margin: 0;
-        height: 8000px;
+        margin: 0;height: 8000px;
       }
 
       ul {
@@ -27,18 +26,19 @@
 
       /* HEADER */
       header {
+        position: fixed; /* header 고정*/
         width: 100%;
         height: var(--nav-height-lg);
         z-index: 100;
-        position: fixed;
       }
 
       /* 768px 보다 클때의 header */
       header .inner {
         background-color: lightblue;
         height: 100%;
+        
         display: flex;
-        justify-content: center;
+        justify-content: center; /* 가로 방향 가운데 정렬 */
         align-items: center;
       }
 
@@ -47,43 +47,46 @@
         position: absolute;
         left: 200px;
         color: white;
-        font-size: 2rem;
+        font-size: 30px;
       }
 
       header .inner .menu {
+        font-weight: bold;
         display: flex;
-      }
-
-      header .inner .menu li {
+    }
+    
+    header .inner .menu li {
         margin: 0px 10px;
-        font-weight: 800;
         cursor: pointer;
-      }
-
-      /* 미디어 쿼리 작성 768px 이하일 때  */
-      @media screen and (max-width: 768px) {
-        header {
-            height: var(--nav-height-sm);
-        }
+    }
+    
+    /* 미디어 쿼리 작성 768px 이하일 때  */
+    @media (max-width: 768px) {
         header .inner {
-            display: block;
+            display: block; /*block은 display를 원래대로 돌려준다*/
+          height: var(--nav-height-sm);
+          
+        }
+        header{
         }
         header .inner .logo {
-            position: static;
-            line-height: var(--nav-height-sm)s;
-            text-align: center;
-        }
-        header .inner .menu {
-            display: block;
-            background-color: azure;
-            text-align: center;
+           position: static;
+           line-height: var(--nav-height-sm)s;
+           text-align: center;
         }
 
+        header .inner .menu {
+          display: block;
+          
+          font-weight: normal;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          background-color: azure;
+        }
         header .inner .menu li {
             padding: 10px 0px;
-            font-weight: 500;
         }
-
       }
     </style>
   </head>
