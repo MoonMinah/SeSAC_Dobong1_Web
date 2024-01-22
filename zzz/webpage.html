@@ -22,19 +22,30 @@
       font-style: italic;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       display: flex;
-      
       justify-content: center;
       align-items: center;
     }
-    .container{
+    .container div{
       width: 180px;
         height: 180px;
         background-color: royalblue;
         border-radius: 50%;
+        margin: 20px;
+        padding: 30px;
+        display: inline-block;
+        opacity: 70%;
+    }
+    .container img{
+      width: 140px;
+      height: 140px;
     }
     .nav-item {
       display: flex;
       align-items: center;
+    }
+    .desert-name{
+      color: black;
+      font-weight: bolder;
     }
     @media screen and (max-width: 768px){
       .nav-item{
@@ -44,6 +55,11 @@
       }
       #carouselExampleDark{
         display: none;
+      }
+      .container {
+        display: block;
+        justify-content: center;
+        align-items: center;
       }
     }
   </style>
@@ -129,89 +145,16 @@
   <hr class="mb-4">
   <div class="container">
     <h1 class="main">desert</h1>
-    <div> </div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <div class="container">
-    <div class="input-form-backgroud row">
-      <div class="input-form col-md-12 mx-auto">
-        <h4 class="mb-3">회원가입</h4>
-        <form class="validation-form" novalidate>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="name">이름</label>
-              <input type="text" class="form-control" id="name" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                이름을 입력해주세요.
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="nickname">별명</label>
-              <input type="text" class="form-control" id="nickname" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                별명을 입력해주세요.
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="email">이메일</label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-            <div class="invalid-feedback">
-              이메일을 입력해주세요.
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="address">주소</label>
-            <input type="text" class="form-control" id="address" placeholder="주소를 입력해주세요" required>
-            <div class="invalid-feedback">
-              주소를 입력해주세요.
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="address2">상세주소<span class="text-muted">&nbsp;(필수 아님)</span></label>
-            <input type="text" class="form-control" id="address2" placeholder="상세주소를 입력해주세요.">
-          </div>
-
-          <hr class="mb-4">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="aggrement" required>
-            <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
-          </div>
-          <div class="mb-4"></div>
-          <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
-        </form>
-      </div>
-    </div>
-    
-    <footer class="my-3 text-center text-small">
-      <p class="mb-1">&copy; 2024</p>
-    </footer>
-  </div>
-  <script>
-    window.addEventListener('load', () => {
-      const forms = document.getElementsByClassName('validation-form');
-
-      Array.prototype.filter.call(forms, (form) => {
-        form.addEventListener('submit', function (event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-           
-          }
-
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  </script>
+    <div><p class="desert-name">내가 아인슈페너</p><img src="./image/icecream1.png" alt=""></div>
+    <div><p class="desert-name">엄마는 외계인</p><img src="./image/icecream2.png" alt=""></div>
+    <div><p class="desert-name">민트초코칩</p><img src="./image/icecream3.png" alt=""></div>
+    <div><p class="desert-name">뉴욕 치즈케이크</p><img src="./image/icecream4.png" alt=""></div>
+    <div><p class="desert-name">초당옥수수</p><img src="./image/icecream5.png" alt=""></div>
+    <div><p class="desert-name">초콜릿 무스</p><img src="./image/icecream6.png" alt=""></div>
+    <div><p class="desert-name">체리쥬빌레</p><img src="./image/icecream7.png" alt=""></div>
+    <div><p class="desert-name">뮤! 넌 내꺼야</p><img src="./image/icecream8.png" alt=""></div>
+    <div><p class="desert-name">오레오 쿠앤크</p><img src="./image/icecream9.png" alt=""></div>
+  </div>  
 
 </body>
 
