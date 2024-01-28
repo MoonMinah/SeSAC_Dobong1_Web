@@ -5,10 +5,10 @@
 */
 
 // 함수 선언문 같은 경우 따로 exports 할 수 없어
-//표현식or 화살표 함수를 사용해서 exports 해야함
+// 따로 하길 원할 경우 표현식or 화살표 함수를 사용해서 exports 해야함
 exports.sayHi2=()=>{
     console.log('hi2');
 }
 exports.sayHi3=function(name){
-
+    console.log(name);
 }

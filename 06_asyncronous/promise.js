@@ -10,9 +10,9 @@ function pickDrink() {
       console.log("고민 끝");
       product = "콜라";
       price = 2000;
+      //resolve("구매완료!");
+      reject("실패");
     }, 3000);
-    //resolve("구매완료!");
-    reject("실패");
   });
 }
 
@@ -21,7 +21,7 @@ function pay() {
 }
 
 goMart();
-pickDrink(pay)
+pickDrink()
   .then(() => {
     pay();
   })

@@ -24,6 +24,7 @@ function hell() {
   });
 }
 
+// promise
 // call -> back -> hell 순서로 실행
 call("kim")
   .then((name) => {

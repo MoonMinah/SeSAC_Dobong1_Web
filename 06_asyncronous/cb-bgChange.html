@@ -12,17 +12,20 @@
   </head>
   <body>
     <h1>배경색이 1초에 한 번씩 변경됩니다.</h1>
-    <!-- red, orange, yellow, green, blue -->
+    <!-- red, orange, -yellow, green, blue -->
     <script>
       setTimeout(() => {
-        document.body, (style.backgroundColor = "red");
+        document.body.style.backgroundColor = "red";
         setTimeout(() => {
-          document.body, (style.backgroundColor = "orange");
+          document.body.style.backgroundColor = "orange";
           setTimeout(() => {
-            document.body, (style.backgroundColor = "green");
+            document.body.style.backgroundColor = "yellow";
             setTimeout(() => {
-              document.body, (style.backgroundColor = "blue");
-            }, 1000); //빨간색으로 변경 후
+              document.body.style.backgroundColor = "green";
+              setTimeout(() => {
+                document.body.style.backgroundColor = "blue";
+              }, 1000);
+            }, 1000);
           }, 1000);
         }, 1000);
       }, 1000);
