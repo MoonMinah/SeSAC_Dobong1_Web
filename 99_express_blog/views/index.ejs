@@ -30,17 +30,20 @@
 
     <script>
       function deleteContent(contentID, btn) {
-        console.log(contentID);
-        console.log(btn);
+        // console.log(contentID);
+        // console.log(btn);  -> this로 전달된 button태그
         if (confirm("정말 삭제하실 건가요?")) {
           // 삭제 로직 작성
           axios({
             method: "delete",
             url: "/blog/delete?contentID=" + contentID,
-          }).catch(function (err) {
-            console.err(err);
-          });
+          })
+            .then(function (response) {})
+            .catch(function (err) {
+              console.err(err);
+            });
           console.log(btn.parentNode);
+          btn.parentNode.remove();
         }
       }
     </script>
