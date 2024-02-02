@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>파일 한 개 업로드</h2>
+    <!-- multipart/form-data는 method가 post일 때만 사용가능 -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="userfile" /><br />
+      <input
+        type="text"
+        name="title"
+        placeholder="사진 제목을 입력해주세요"
+      /><br /><br />
+      <button type="submit">업로드</button>
+    </form>
+
+    <h2>파일 여러개 업로드(ver.01)</h2>
+    <p>하나의 input에 여러 개 파일 업로드</p>
+    <form action="/uploads/array" method="post" enctype="multipart/form-data">
+      <input type="file" name="multifiles" multiple /><br />
+      <input
+        type="text"
+        name="title"
+        placeholder="사진 제목을 입력해주세요"
+      /><br /><br />
+      <button type="submit">업로드</button>
+    </form>
+
+    <h2>파일 여러개 업로드(ver.02)</h2>
+    <p>여러 개 input에 각각 하나씩 파일 업로드</p>
+    <form action="/uploads/fields" method="post" enctype="multipart/form-data">
+      <input type="file" name="file1" /><br />
+      <input
+        type="text"
+        name="title1"
+        placeholder="사진 제목을 입력해주세요"
+      /><br /><br />
+
+      <input type="file" name="file2" /><br />
+      <input
+        type="text"
+        name="title2"
+        placeholder="사진 제목을 입력해주세요"
+      /><br /><br />
+
+      <input type="file" name="file3" /><br />
+      <input
+        type="text"
+        name="title3"
+        placeholder="사진 제목을 입력해주세요"
+      /><br /><br />
+      <button type="submit">업로드</button>
+    </form>
+  </body>
+</html>

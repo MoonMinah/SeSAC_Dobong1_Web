@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <label
+        >아이디
+        <input type="text" name="id" placeholder="아이디입력" />
+      </label>
+      <br />
+      <label
+        >비밀번호
+        <input type="password" name="pw" placeholder="비밀번호입력" />
+      </label>
+      <br />
+      <label
+        >이름
+        <input type="text" name="name" placeholder="이름입력" />
+      </label>
+      <br />
+      <label
+        >나이
+        <input type="numnber" anme="age" placeholder="나이입력" />
+      </label>
+      <br /><br />
+      <label
+        >프로필사진
+        <input type="file" name="userfile" />
+      </label>
+      <br /><br />
+
+      <!-- 타입에 reset을 넣어주면 onclick을 설정하지 않아도 된다. -->
+      <button type="button" onclick="resetForm()">리셋</button>
+      <button type="submit">회원가입</button>
+    </form>
+
+    <script>
+      // 리셋 버튼을 클릭했을 때 폼 초기화
+      function resetForm() {
+        form.reset();
+      }
+    </script>
+  </body>
+</html>

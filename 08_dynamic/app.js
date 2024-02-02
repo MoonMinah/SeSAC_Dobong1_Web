@@ -5,7 +5,6 @@ const PORT = 9090;
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-// 밑의 두줄이 있어야 body-parser로 읽고 쓸 수 있다.
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -51,32 +50,42 @@ app.post("/fetch", function (req, res) {
   res.send(req.body);
 });
 
-//open API 사용
+// open api 사용
 app.get("/open-api", function (req, res) {
   res.render("api");
 });
 
-// 실습문제 axiosGet
+// 실습문제
+const id = "pororo";
+const pw = "1234";
 app.get("/practice1", (req, res) => {
-  res.render("practice/practice1.ejs");
+  console.log(req.query); //데이터가 잘 담겨져 오는지 확인
+  res.render("practice1");
 });
-app.get("/axiosGet", function (req, res) {
-  console.log(req.query);
-  res.send(req.query);
+app.get("/axios-practice1", (req, res) => {
+  console.log(req.query); //practice1.ejs의 params:data가 query로 온다
+  res.send(req.query); //query로 받은 data정보를 send를 통해보내준다.
 });
 
-// 실습문제 axios post
 app.get("/practice2", (req, res) => {
-  res.render("practice/practice2.ejs");
-});
-app.post("/axiosPost", (req, res) => {
-  console.log(req.body);
-  res.send(req.body);
+  res.render("practice2");
 });
 
-app.get("/test", (req, res) => {
-  res.render("test");
+app.post("/axios-practice2", (req, res) => {
+  console.log(req.body);
+  // 서버의 계정정보와, 클라이언트의 계정정보가 일치하는지
+  const { id: clientId, password: clientPw } = req.body;
+  if (clientId === id && clientPw === pw) {
+    res.send({
+      userInfo: req.body,
+      // ...req.body,
+      isSuccess: true,
+    });
+  } else {
+    res.send({ isSuccess: false });
+  }
 });
+
 app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
