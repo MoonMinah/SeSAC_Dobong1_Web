@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <form name="login">
+      <label>
+        아이디
+        <input type="text" name="id" required />
+      </label>
+      <br />
+      <label>
+        비밀번호
+        <input type="password" name="pw" required />
+      </label>
+      <br /><br />
+
+      <button type="button" onclick="userLogin();">로그인</button>
+      <button>로그인</button>
+      <br />
+      <div class="message"></div>
+    </form>
+    <script>
+      const form = document.forms["login"];
+      const message = document.querySelector(".message");
+      function userLogin() {
+        console.log("안녕");
+        // 유효성 검증(required 표시된 항목에 대해서 체크)
+        console.log(form.id.checkValidity());
+        if (!form.id.checkValidity() || !form.pw.checkValidity()) {
+          message.textContent = "아이디와 비밀번호는 필수 값입니다.";
+          return;
+        }
+
+        const data = {
+          id: form.id.value,
+          password: form.pw.value,
+        };
+        axios({
+          method: "POST",
+          url: "/login",
+          data: data,
+        })
+          .then(function (response) {
+            console.log(response.data);
+            // message : 성공시 파란글자, 실패시 빨간 글자
+            if (response.data.isSuccess) {
+              // 로그인 성공
+              message.textContent = `${response.data.loginInfo.id}님 환영합니다.`;
+              message.classList.add("success");
+              message.classList.remove("error");
+            } else {
+              // 로그인 실패
+              message.textContent = `로그인실패, 아이디 또는 패스워드 오류😢`;
+              message.classList.remove("success");
+              message.classList.add("error");
+            }
+          })
+          .catch((err) => console.log(err));
+      }
+    </script>
+  </body>
+</html>
