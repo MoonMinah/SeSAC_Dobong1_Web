@@ -89,6 +89,8 @@ exports.deleteVisitor = (req, res) => {
 // PATCH /visitor
 exports.patchVisitor = (req, res) => {
   console.log(req.body); //{id, name, comment}
+
+  // [before sequelize]
   // Visitor.patchVisitor(req.body, (result) => {
   //   console.log("Cvisitor.js patch", result);
 
@@ -104,5 +106,7 @@ exports.patchVisitor = (req, res) => {
     {
       where: { id: req.body.id },
     }
-  );
+  ).then((result) => {
+    res.send(req.body.id + "번 방명록 수정");
+  });
 };

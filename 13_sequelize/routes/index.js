@@ -13,4 +13,6 @@ router.post("/visitor", controller.postVisitor);
 router.delete("/visitor", controller.deleteVisitor);
 router.patch("/visitor", controller.patchVisitor);
 
+// 로그인 회원가입
+
 module.exports = router;
