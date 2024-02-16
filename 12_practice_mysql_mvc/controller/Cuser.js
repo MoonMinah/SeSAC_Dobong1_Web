@@ -1,5 +1,5 @@
 // TODO: 컨트롤러 코드
-const User = require("User");
+const User = require("../model/User");
 
 // GET/user
 exports.main = (req, res) => {

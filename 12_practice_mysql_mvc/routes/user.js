@@ -8,7 +8,7 @@ router.get("/", controller.main);
 // GET /user/signin
 router.get("/signin", controller.get_signin);
 // GET /user/signup
-router.get("/signup", controller.get_signin);
+router.get("/signup", controller.get_signup);
 
 // POST/user/signup
 router.post("/signup", controller.post_signup);

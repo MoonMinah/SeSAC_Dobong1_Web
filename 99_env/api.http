@@ -1,0 +1,3 @@
+@server=http://localhost9090;
+
+GET {{server}}/
