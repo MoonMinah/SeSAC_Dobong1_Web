@@ -110,3 +110,12 @@ exports.patchVisitor = (req, res) => {
     res.send(req.body.id + "번 방명록 수정");
   });
 };
+
+//실습 회원가입/로그인
+exports.signupPage = (req, res) => {
+  res.render("signup");
+};
+
+exports.loginPage = (req, res) => {
+  res.render("login");
+};

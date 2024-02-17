@@ -14,5 +14,8 @@ router.delete("/visitor", controller.deleteVisitor);
 router.patch("/visitor", controller.patchVisitor);
 
 // 로그인 회원가입
+router.get("/signup", controller.signupPage);
+//router.post("/signup".controller.signup);
+router.get("/login", controller.loginPage);
 
 module.exports = router;
