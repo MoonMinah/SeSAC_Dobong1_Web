@@ -38,3 +38,14 @@ FLUSH PRIVILEGES;
 select * from mysql.user;
 
 SELECT host, user from mysql.user;
+
+
+--회원가입용 데이터베이스
+CREATE TABLE signup(
+    id INT PRIMARY KEY,
+    password INT NOT NULL,
+    name VARCHAR(8) NOT NULL
+);
+DESC signup;
+
+SELECT * FROM user;

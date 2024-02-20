@@ -18,4 +18,5 @@ db.Sequelize = Sequelize;
 
 // db라는 변수를 내보내는 중
 db.Visitor = require("./Visitor")(sequelize, Sequelize);
+db.User = require("./User")(sequelize, Sequelize);
 module.exports = db;

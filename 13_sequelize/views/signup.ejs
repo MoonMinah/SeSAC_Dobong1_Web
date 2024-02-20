@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <h1>회원가입</h1>
@@ -19,5 +20,28 @@
     <br />
     <!-- TODO: href 속성값 설정하기 -->
     <a href="/login">로그인 페이지</a>
+
+    <script>
+      function register() {
+        const form = document.forms["form_register"];
+        if (!form.checkValidity()) {
+          form.reportVlidity();
+          return;
+        }
+        axios({
+          url: "/signup",
+          method: "post",
+          data: {
+            id: form.userid.value,
+            password: form.password.value,
+            name: form.nickname.value,
+          },
+        }).then((res) => {
+          console.log("응답데이터", res.data);
+          alert("회원가입 성공");
+          document.location.href = "/login";
+        });
+      }
+    </script>
   </body>
 </html>

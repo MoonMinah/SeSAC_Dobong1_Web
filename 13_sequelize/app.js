@@ -16,6 +16,10 @@ const indexRouter = require("./routes");
 // const indexRouter = require('./routes/index')    //경로 마지막 index만 생략가능
 app.use("/", indexRouter);
 
+// /user
+const userRouter = require("./routes/user");
+app.use("./user", userRouter);
+
 // 404 error
 app.get("*", (req, res) => {
   res.render("404");

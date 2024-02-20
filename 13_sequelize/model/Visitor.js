@@ -88,3 +88,16 @@ exports.patchVisitor = (data, cb) => {
     }
   );
 };
+
+//실습
+//회원가입
+// exports.signup = (data, cb) => {
+//   console.log("model", data);
+
+//   const sql = `INSERT INTO signup VALUES('${data.id}','${data.password}','${data.name}')`;
+//   conn.query(sql, (err, row) => {
+//     if (err) throw err;
+//     console.log("rows", rows);
+//     cb();
+//   });
+// };
