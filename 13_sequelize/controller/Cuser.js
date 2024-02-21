@@ -132,6 +132,7 @@ exports.edit_profile = (req, res) => {
     console.log("회원정보수정", result);
     // [1],[0]
     //수정 성공, 수정 실패
+    //where조건에 해당하는 레코드를 못찾았을 때 실패
     res.end();
   });
 };
@@ -146,8 +147,8 @@ exports.delete_profile = (req, res) => {
 
   models.User.destroy({
     where: { id: req.body.id },
-  }).then((resutl) => {
-    console.log("회웑 정보 삭제", result);
+  }).then((result) => {
+    console.log("회원 정보 삭제", result);
     // 1: 삭제 성공
     // 0: 삭제 실패
     res.end();
