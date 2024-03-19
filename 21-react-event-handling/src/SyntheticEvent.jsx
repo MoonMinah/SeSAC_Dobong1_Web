@@ -1,42 +1,19 @@
-// import React from "react";
+function SyntheticEvent() {
+  function syntheticEvent(e) {
+    console.log(e);
+  }
+  function printInputValue(e) {
+    console.log(e.target.value);
+  }
 
-// function HelloWorld(e) {
-//   // You can define the behavior of HelloWorld here
-// }
+  return (
+    <div>
+      <button onClick={syntheticEvent}>클릭이벤트 콘솔에 찍기</button>
+      {/* <button onClick={(e)=>{syntheticEvent(e)}}>클릭이벤트 콘솔에 찍기</button> */}
+      <br />
+      <input type="text" placeholder="입력" onChange={printInputValue}></input>
+    </div>
+  );
+}
 
-// function GoodbyeWorld(e) {
-//   console.log(e.target.value);
-// }
-
-// function HandlerEx() {
-//   return (
-//     <div>
-//       <button onClick={HelloWorld}></button>
-//       <input
-//         type="text"
-//         placeholder="Hello World"
-//         onChange={GoodbyeWorld}
-//       ></input>
-//     </div>
-//   );
-// }
-
-// function SyntheticEvent() {
-//   function syntheticEvent(e) {
-//     console.log(e);
-//   }
-
-//   function printInputValue(e) {
-//     console.log(e.target.value);
-//   }
-
-//   return (
-//     <div>
-//       <button onClick={syntheticEvent}>클릭이벤트 콘솔에 찍기</button>
-//       <br />
-//       <input type="text" placeholder="입력" onChange={printInputValue}></input>
-//     </div>
-//   );
-// }
-
-// export { HandlerEx, SyntheticEvent };
+export default SyntheticEvent;

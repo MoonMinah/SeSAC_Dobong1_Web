@@ -1,17 +1,20 @@
 import { useState } from "react";
 
 const Counter = () => {
-  const [number, setNumner] = useState(0);
+  const [number, setNumber] = useState(0);
   const increase = () => {
-    setNumner(number + 1);
+    setNumber(number + 1);
   };
+
   const alertMsg = (event, msg) => {
     console.log(event.target);
     alert(`${msg}~, 현재 숫자는 ${number}입니다.`);
   };
-  const consleMsg = (msg) => {
+
+  const consoleMsg = (msg) => {
     console.log(`${msg}~, 현재 숫자는 ${number}입니다.`);
   };
+
   const handleEvent = (e) => {
     console.log(e.target); //sapn
     console.log(e.currentTarget); //button > span
@@ -29,7 +32,7 @@ const Counter = () => {
       </button>
       <button
         onClick={() => {
-          consleMsg("안녕하세요");
+          consoleMsg("안녕하세요");
         }}
       >
         console 출력
